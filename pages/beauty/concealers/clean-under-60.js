@@ -1,4 +1,6 @@
 import { loadProducts } from "../../../lib/loadProducts";
+import Head from "next/head";
+
 
 export async function getStaticProps() {
   const products = loadProducts();
@@ -21,7 +23,14 @@ export async function getStaticProps() {
 export default function CleanConcealersUnder60({ products, lastUpdated }) {
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Clean Beauty Concealers under £60</h1>
+      <Head>
+  <title>Clean beauty concealers under £60 | BestFinds UK</title>
+  <meta
+    name="description"
+    content="A factual list of clean beauty concealers available in the UK, priced under £60 at the time of checking, with attributes shown where available."
+  />
+</Head>
+<h1>Clean Beauty Concealers under £60</h1>
 
       <p>
         This page lists clean ingredients, cruelty-free concealers available in the UK,
