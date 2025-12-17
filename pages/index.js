@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace("/beauty/concealers/clean-under-60");
+    router.replace("/home/vacuums/cordless-under-120");
   }, [router]);
 
   return null;
