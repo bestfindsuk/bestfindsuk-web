@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { loadVacuums } from "../../../lib/loadVacuums";
 
@@ -19,7 +20,16 @@ export async function getStaticProps() {
 export default function CordlessUnder120({ products, lastUpdated }) {
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Cordless vacuum cleaners under £120</h1>
+      
+  <Head>
+        <title>Cordless vacuum cleaners under £120 | BestFinds UK</title>
+        <meta
+          name="description"
+          content="A factual list of cordless vacuum cleaners available in the UK, priced under £120 at the time of checking."
+        />
+      </Head>
+            
+  <h1>Cordless vacuum cleaners under £120</h1>
 
       <p>
         This page lists cordless vacuum cleaners available in the UK, priced under £120 at the time of checking.
