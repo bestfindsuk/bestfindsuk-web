@@ -21,10 +21,10 @@ export async function getStaticProps() {
 export default function CleanConcealersUnder60({ products, lastUpdated }) {
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Clean concealers under £60</h1>
+      <h1>Clean Beauty Concealers under £60</h1>
 
       <p>
-        This page lists clean, cruelty-free concealers available in the UK,
+        This page lists clean ingredients, cruelty-free concealers available in the UK,
         priced under £60 at the time of checking.
       </p>
 
