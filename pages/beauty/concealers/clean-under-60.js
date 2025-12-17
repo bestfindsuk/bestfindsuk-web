@@ -47,27 +47,32 @@ export default function CleanConcealersUnder60({ products, lastUpdated }) {
 
       <ul>
         {products.map((product) => (
-          <li key={product.id} style={{ marginBottom: "1.5rem" }}>
-            <h3>{product.name}</h3>
-            <p>
-              {product.brand} · £{product.price_gbp} · {product.merchant}
-            </p>
+  <li key={product.id} style={{ marginBottom: "1.5rem" }}>
+    {product.image_url ? (
+      <img
+        src={product.image_url}
+        alt={product.name}
+        style={{ width: "120px", height: "auto", display: "block", marginBottom: "0.75rem" }}
+      />
+    ) : null}
 
-            <p>
-              {product.clean === "yes" && "Clean · "}
-              {product.cruelty_free === "yes" && "Cruelty-free · "}
-              {product.vegan === "yes" && "Vegan"}
-            </p>
+    <h3>{product.name}</h3>
+    <p>
+      {product.brand} · £{product.price_gbp} · {product.merchant}
+    </p>
 
-            <a
-              href={product.affiliate_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View at retailer
-            </a>
-          </li>
-        ))}
+    <p>
+      {product.clean === "yes" ? "Clean · " : ""}
+      {product.cruelty_free === "yes" ? "Cruelty free · " : ""}
+      {product.vegan === "yes" ? "Vegan" : ""}
+    </p>
+
+    <a href={product.affiliate_url} target="_blank" rel="noopener noreferrer">
+      View at retailer
+    </a>
+  </li>
+))}
+
       </ul>
 
       <hr />
