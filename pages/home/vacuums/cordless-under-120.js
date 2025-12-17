@@ -101,6 +101,11 @@ export default function CordlessUnder120({ products, lastUpdated }) {
       <p>
         <strong>Amazon disclosure:</strong> As an Amazon Associate, BestFinds UK earns from qualifying purchases.
       </p>
+<p>
+  Also see: <a href="/beauty/concealers/clean-under-60">Clean beauty concealers under £60</a>
+</p>
+
+          
     </main>
   );
 }
