@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { loadVacuums } from "../../../lib/loadVacuums";
 
@@ -15,7 +16,7 @@ export async function getStaticProps() {
     },
   };
 }
-import Head from "next/head";
+
 export default function CordlessUnder120({ products, lastUpdated }) {
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
