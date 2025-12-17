@@ -21,7 +21,7 @@ export async function getStaticProps() {
 export default function CleanConcealersUnder60({ products, lastUpdated }) {
   return (
     <main style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Premium clean concealers under £60</h1>
+      <h1>Clean concealers under £60</h1>
 
       <p>
         This page lists clean, cruelty-free concealers available in the UK,
@@ -30,8 +30,7 @@ export default function CleanConcealersUnder60({ products, lastUpdated }) {
 
       <p>
         Products are included based on clear criteria only: category, price, and
-        brand or retailer clean beauty positioning. No performance testing or
-        subjective reviews are used.
+        brand or retailer clean beauty positioning.
       </p>
 
       <p>
@@ -83,7 +82,7 @@ export default function CleanConcealersUnder60({ products, lastUpdated }) {
 
       <p>
         Additional attributes such as vegan status or product format are shown
-        where available but are not required for inclusion.
+        where available.
       </p>
     </main>
   );
