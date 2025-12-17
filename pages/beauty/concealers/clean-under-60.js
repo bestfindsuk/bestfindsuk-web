@@ -39,11 +39,7 @@ export default function CleanConcealersUnder60({ products, lastUpdated }) {
 
       <hr />
 
-      <p>
-        <strong>Affiliate disclosure:</strong> Some links on this page are
-        affiliate links. This means BestFinds UK may earn a small commission if
-        you choose to make a purchase, at no extra cost to you.
-      </p>
+   
 
       <ul>
         {products.map((product) => (
@@ -89,6 +85,13 @@ export default function CleanConcealersUnder60({ products, lastUpdated }) {
         Additional attributes such as vegan status or product format are shown
         where available.
       </p>
+
+             <p>
+        <strong>Affiliate disclosure:</strong> Some links on this page are
+        affiliate links. This means BestFinds UK may earn a small commission if
+        you choose to make a purchase, at no extra cost to you.
+      </p>
+          
     </main>
   );
 }
