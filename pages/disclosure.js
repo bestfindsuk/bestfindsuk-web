@@ -108,9 +108,9 @@ export default function Disclosure() {
               <p>
                 If you have any questions about our affiliate relationships or how
                 we select products, please don't hesitate to{" "}
-                <a href="mailto:hello@bestfindsuk.com" className="text-sage-dark hover:text-terracotta underline">
+                <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
                   contact us
-                </a>.
+                </Link>.
               </p>
 
               <p className="text-sm text-grey-light mt-8">

@@ -30,8 +30,7 @@ export default function About() {
             <h2 className="text-2xl font-semibold text-charcoal mb-6">Our Story</h2>
             <div className="prose text-grey space-y-4">
               <p>
-                Hi, I'm Aish. I'm a product manager by day and a research enthusiast
-                by nature. BestFindsUK started because I was frustrated with the state
+                BestFindsUK started because we were frustrated with the state
                 of product recommendations online.
               </p>
               <p>
@@ -41,9 +40,9 @@ export default function About() {
                 that break within months.
               </p>
               <p>
-                I wanted something different: a curated collection of products in the
+                We wanted something different: a curated collection of products in the
                 sweet spot of £30-£200—premium enough to actually be well-made, but
-                accessible enough that real people can afford them. Products I'd
+                accessible enough that real people can afford them. Products we'd
                 genuinely recommend to friends and family.
               </p>
               <p>
@@ -220,10 +219,10 @@ export default function About() {
       <section className="py-8 bg-cream-dark/50">
         <div className="container">
           <p className="text-center text-sm text-grey">
-            Have questions or product suggestions? Get in touch at{" "}
-            <a href="mailto:hello@bestfindsuk.com" className="text-sage-dark hover:text-terracotta underline">
-              hello@bestfindsuk.com
-            </a>
+            Have questions or product suggestions?{" "}
+            <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
+              Get in touch
+            </Link>
           </p>
         </div>
       </section>

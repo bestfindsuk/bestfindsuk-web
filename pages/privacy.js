@@ -138,10 +138,10 @@ export default function Privacy() {
                 <li>Withdraw consent at any time</li>
               </ul>
               <p>
-                To exercise these rights, please contact us at{" "}
-                <a href="mailto:hello@bestfindsuk.com" className="text-sage-dark hover:text-terracotta underline">
-                  hello@bestfindsuk.com
-                </a>.
+                To exercise these rights, please{" "}
+                <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
+                  contact us
+                </Link>.
               </p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
@@ -177,10 +177,10 @@ export default function Privacy() {
               </h2>
               <p>
                 If you have questions about this privacy policy or our data practices,
-                please contact us at{" "}
-                <a href="mailto:hello@bestfindsuk.com" className="text-sage-dark hover:text-terracotta underline">
-                  hello@bestfindsuk.com
-                </a>.
+                please{" "}
+                <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
+                  contact us
+                </Link>.
               </p>
 
               <p className="text-sm text-grey-light mt-8">

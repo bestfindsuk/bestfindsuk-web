@@ -20,20 +20,6 @@ export default function Contact() {
 
             <div className="bg-white rounded-xl p-8 md:p-12 text-left">
               <div className="space-y-8">
-                {/* Email */}
-                <div>
-                  <h2 className="font-semibold text-charcoal mb-2">Email</h2>
-                  <p className="text-grey mb-2">
-                    The best way to reach us:
-                  </p>
-                  <a
-                    href="mailto:hello@bestfindsuk.com"
-                    className="text-sage-dark hover:text-terracotta font-medium text-lg"
-                  >
-                    hello@bestfindsuk.com
-                  </a>
-                </div>
-
                 {/* Product Suggestions */}
                 <div>
                   <h2 className="font-semibold text-charcoal mb-2">
@@ -41,8 +27,7 @@ export default function Contact() {
                   </h2>
                   <p className="text-grey text-sm">
                     Know a product we should feature? We're always looking for
-                    quality recommendations. Send us the product name, brand, and
-                    why you think it's worth including. Please note we only feature
+                    quality recommendations. Please note we only feature
                     products in the £30-£200 range that meet our quality criteria.
                   </p>
                 </div>
@@ -65,8 +50,16 @@ export default function Contact() {
                     Business Enquiries
                   </h2>
                   <p className="text-grey text-sm">
-                    For partnership or business-related enquiries, please email us.
+                    For partnership or business-related enquiries, please reach out.
                     Note: We do not accept sponsored posts or paid product placements.
+                  </p>
+                </div>
+
+                {/* Contact Note */}
+                <div className="pt-4 border-t border-cream-dark">
+                  <p className="text-grey text-sm">
+                    Contact form coming soon. In the meantime, you can reach us through
+                    our social media channels.
                   </p>
                 </div>
               </div>

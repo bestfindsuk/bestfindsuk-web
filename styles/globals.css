@@ -1,42 +1,14 @@
 @import "tailwindcss";
 
-/* Custom Design System for BestFindsUK */
-@theme {
-  /* Color Palette - Warm, Scandinavian-inspired */
-  --color-cream: #F5F5F0;
-  --color-cream-dark: #EEEEE8;
-  --color-sage: #A4B8A0;
-  --color-sage-dark: #8FA88A;
-  --color-terracotta: #C07856;
-  --color-terracotta-dark: #A86544;
-  --color-charcoal: #2C2C2C;
-  --color-grey: #6B6B6B;
-  --color-grey-light: #9A9A9A;
-  --color-white: #FFFFFF;
-
-  /* Typography */
-  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-}
-
 /* Base Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #F5F5F0;
+  color: #2C2C2C;
   line-height: 1.7;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -45,47 +17,32 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 600;
   line-height: 1.3;
-  color: var(--color-charcoal);
+  color: #2C2C2C;
 }
 
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-size: 1.875rem;
-  letter-spacing: -0.01em;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-p {
-  max-width: 65ch;
-}
+h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.875rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; }
 
 a {
-  color: var(--color-sage-dark);
+  color: #8FA88A;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-terracotta);
+  color: #C07856;
 }
 
-/* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--color-sage);
+  outline: 2px solid #A4B8A0;
   outline-offset: 2px;
 }
 
-/* Utility Classes */
+/* Layout */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -95,13 +52,38 @@ a:hover {
   padding-right: 1.5rem;
 }
 
-.prose {
-  max-width: 65ch;
-}
+/* Color utilities */
+.bg-white { background-color: #FFFFFF; }
+.bg-cream { background-color: #F5F5F0; }
+.bg-cream-dark { background-color: #EEEEE8; }
+.bg-cream-dark\/50 { background-color: rgba(238, 238, 232, 0.5); }
+.bg-sage { background-color: #A4B8A0; }
+.bg-sage\/10 { background-color: rgba(164, 184, 160, 0.1); }
+.bg-sage\/15 { background-color: rgba(164, 184, 160, 0.15); }
+.bg-charcoal { background-color: #2C2C2C; }
 
-.prose p {
-  margin-bottom: 1.5rem;
-}
+.text-white { color: #FFFFFF; }
+.text-cream { color: #F5F5F0; }
+.text-charcoal { color: #2C2C2C; }
+.text-grey { color: #6B6B6B; }
+.text-grey-light { color: #9A9A9A; }
+.text-sage { color: #A4B8A0; }
+.text-sage-dark { color: #8FA88A; }
+.text-terracotta { color: #C07856; }
+
+.border-cream-dark { border-color: #EEEEE8; }
+.border-grey\/20 { border-color: rgba(107, 107, 107, 0.2); }
+
+.hover\:text-white:hover { color: #FFFFFF; }
+.hover\:text-charcoal:hover { color: #2C2C2C; }
+.hover\:text-sage:hover { color: #A4B8A0; }
+.hover\:text-sage-dark:hover { color: #8FA88A; }
+.hover\:text-terracotta:hover { color: #C07856; }
+
+.hover\:bg-cream:hover { background-color: #F5F5F0; }
+.hover\:bg-sage:hover { background-color: #A4B8A0; }
+.hover\:bg-sage-dark:hover { background-color: #8FA88A; }
+.hover\:bg-charcoal:hover { background-color: #2C2C2C; }
 
 /* Button Styles */
 .btn {
@@ -118,29 +100,29 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--color-sage);
-  color: var(--color-white);
+  background-color: #A4B8A0;
+  color: #FFFFFF;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-sage-dark);
-  color: var(--color-white);
+  background-color: #8FA88A;
+  color: #FFFFFF;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-charcoal);
-  border: 1px solid var(--color-charcoal);
+  color: #2C2C2C;
+  border: 1px solid #2C2C2C;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-charcoal);
-  color: var(--color-white);
+  background-color: #2C2C2C;
+  color: #FFFFFF;
 }
 
 /* Card Styles */
 .card {
-  background-color: var(--color-white);
+  background-color: #FFFFFF;
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -151,22 +133,10 @@ a:hover {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive breakpoints reminder:
-   sm: 640px
-   md: 768px
-   lg: 1024px
-   xl: 1280px
-*/
-
+/* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
