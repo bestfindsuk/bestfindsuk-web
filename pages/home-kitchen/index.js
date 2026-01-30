@@ -21,94 +21,92 @@ export default function HomeKitchenCategory({ products, lastUpdated }) {
   return (
     <Layout
       title="Home & Kitchen"
-      description="Quality home essentials built to last - from cordless vacuums to kitchen tools. All products researched for durability, performance, and value."
+      description="Everyday essentials that quietly make life better. Products we've researched for build quality, thoughtful design, and genuine usefulness."
     >
       {/* Hero */}
-      <section className="bg-white border-b border-cream-dark">
-        <div className="container py-12 md:py-16">
+      <section className="bg-white">
+        <div className="container py-16 md:py-20">
           <div className="max-w-2xl">
             <Link
               href="/"
-              className="text-sm text-grey hover:text-charcoal mb-4 inline-flex items-center"
+              className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
             >
               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Home
+              Home
             </Link>
-            <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
               Home & Kitchen
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+              The everyday things that matter
             </h1>
             <p className="text-grey text-lg leading-relaxed">
-              Quality home essentials that make everyday life easier. We focus on
-              products built to last, with thoughtful design and genuine utility.
-              From cordless vacuums to kitchen tools, every item is selected for
-              durability, performance, and real value.
+              There's something satisfying about a tool that just works. We look for
+              home essentials with real craftsmanship—things you'll reach for again
+              and again without thinking twice.
             </p>
-            <p className="text-sm text-grey-light mt-4">
-              Last updated: {lastUpdated}
+            <p className="text-xs text-grey-light mt-6">
+              Updated {lastUpdated}
             </p>
           </div>
         </div>
       </section>
 
       {/* Subcategories */}
-      <section className="py-8 bg-cream">
+      <section className="py-6 bg-cream border-y border-cream-dark">
         <div className="container">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-sm text-grey mr-2">Browse:</span>
             <Link
               href="/home/vacuums/cordless-under-120"
-              className="px-4 py-2 bg-white rounded-full text-sm font-medium text-charcoal hover:bg-sage hover:text-white transition-colors"
+              className="px-4 py-2 bg-white rounded-full text-sm font-medium text-charcoal hover:bg-sage hover:text-white transition-colors shadow-sm"
             >
               Cordless Vacuums Under £120
             </Link>
             <Link
               href="/home/vacuums/cordless-under-200"
-              className="px-4 py-2 bg-white rounded-full text-sm font-medium text-charcoal hover:bg-sage hover:text-white transition-colors"
+              className="px-4 py-2 bg-white rounded-full text-sm font-medium text-charcoal hover:bg-sage hover:text-white transition-colors shadow-sm"
             >
               Cordless Vacuums Under £200
             </Link>
-            <span className="px-4 py-2 bg-cream-dark rounded-full text-sm text-grey cursor-default">
-              More coming soon...
+            <span className="px-4 py-2 text-sm text-grey-light">
+              More coming soon
             </span>
           </div>
         </div>
       </section>
 
       {/* Products Grid */}
-      <section className="py-12 md:py-16">
+      <section className="py-14 md:py-20">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
-            <h2 className="text-xl font-semibold text-charcoal">
-              All Home & Kitchen Products ({products.length})
+          <div className="mb-10">
+            <h2 className="text-2xl font-semibold text-charcoal">
+              All picks
             </h2>
+            <p className="text-grey text-sm mt-1">{products.length} products</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
 
           {products.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-grey">No products found in this category yet.</p>
+            <div className="text-center py-20">
+              <p className="text-grey">We're still curating this category. Check back soon.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Affiliate Disclosure */}
-      <section className="py-8 bg-cream-dark/50">
+      <section className="py-6 bg-cream-dark/30">
         <div className="container">
-          <p className="text-sm text-grey">
-            <strong>Affiliate disclosure:</strong> Some links on this page are
-            affiliate links. This means BestFindsUK may earn a small commission
-            if you choose to make a purchase, at no extra cost to you.
-          </p>
-          <p className="text-sm text-grey mt-2">
-            <strong>Amazon disclosure:</strong> As an Amazon Associate, BestFindsUK
-            earns from qualifying purchases.
+          <p className="text-xs text-grey-light text-center">
+            Some links are affiliate links—we may earn a small commission at no extra cost to you.
           </p>
         </div>
       </section>

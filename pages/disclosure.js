@@ -16,32 +16,24 @@ export default function Disclosure() {
 
             <div className="prose text-grey space-y-6">
               <p className="text-lg">
-                BestFindsUK is a participant in various affiliate advertising programs.
-                This means we may earn a commission when you click on links and make
-                purchases through our site.
+                We want to be upfront about how we keep the lights on. When you buy
+                something through a link on our site, we might earn a small commission.
+                It's how we fund the time we spend researching and writing.
               </p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
-                How Affiliate Links Work
+                How it works
               </h2>
               <p>
-                When you click on a product link on BestFindsUK and make a purchase,
-                we may receive a small commission from the retailer. This commission
-                comes at no additional cost to you—you pay the same price whether you
-                use our link or go directly to the retailer.
+                If you click a product link here and end up buying it, the retailer
+                may pay us a small cut. It doesn't cost you anything extra—you pay
+                the same price either way.
               </p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
-                Our Affiliate Partners
+                Who we work with
               </h2>
-              <p>We participate in affiliate programs with various retailers, including:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Amazon Associates Programme (UK)</li>
-                <li>Space NK</li>
-                <li>Cult Beauty</li>
-                <li>Sephora UK</li>
-                <li>And other retailers as noted on individual product pages</li>
-              </ul>
+              <p>We have affiliate relationships with retailers including Amazon, Space NK, Cult Beauty, Sephora UK, and others you'll see mentioned on product pages.</p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
                 Amazon Associates Disclosure
@@ -53,63 +45,44 @@ export default function Disclosure() {
               </p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
-                Our Editorial Independence
+                What doesn't change
               </h2>
               <p>
-                Our commitment to honest recommendations is absolute. Here's how we
-                maintain editorial independence:
+                The money side of things never affects what we recommend. A few things
+                that matter to us:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>No paid placements:</strong> We never accept payment to
-                  feature specific products.
+                  We don't take money to feature products. If it's here, it earned its spot.
                 </li>
                 <li>
-                  <strong>Commission doesn't influence selection:</strong> We choose
-                  products based on quality and value, not commission rates.
+                  Commission rates don't influence what we pick. Better commission doesn't
+                  mean better placement.
                 </li>
                 <li>
-                  <strong>We recommend products we'd buy ourselves:</strong> If we
-                  wouldn't use it, we won't recommend it.
+                  We only recommend things we'd genuinely consider buying ourselves.
                 </li>
                 <li>
-                  <strong>Transparency about limitations:</strong> We're clear about
-                  what we know and don't know about each product.
+                  We're honest about what we don't know, too.
                 </li>
               </ul>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
-                Why We Use Affiliate Links
+                Why we do it this way
               </h2>
               <p>
-                Affiliate commissions help us cover the costs of running BestFindsUK—
-                hosting, research time, and content creation. This allows us to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Keep the site free from advertisements</li>
-                <li>Avoid paywalls or subscription models</li>
-                <li>Spend more time researching and curating quality products</li>
-                <li>Regularly update our recommendations</li>
-              </ul>
-
-              <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
-                FTC Compliance
-              </h2>
-              <p>
-                This disclosure is provided in accordance with the Federal Trade
-                Commission's guidelines on endorsements and testimonials, as well
-                as UK advertising standards. We believe in full transparency about
-                our business model.
+                Affiliate income lets us keep the site ad-free and without paywalls.
+                It gives us time to properly research products and keep recommendations
+                up to date. We think it's a fair trade.
               </p>
 
               <h2 className="text-xl font-semibold text-charcoal mt-8 mb-4">
                 Questions?
               </h2>
               <p>
-                If you have any questions about our affiliate relationships or how
-                we select products, please don't hesitate to{" "}
+                Curious about anything else? Happy to chat—just{" "}
                 <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
-                  contact us
+                  get in touch
                 </Link>.
               </p>
 

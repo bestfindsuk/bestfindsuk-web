@@ -1,9 +1,4 @@
 import Layout from "../components/Layout";
-import CategoryCard, {
-  BeautyIcon,
-  HomeIcon,
-  LifestyleIcon,
-} from "../components/CategoryCard";
 import ProductCard from "../components/ProductCard";
 import { loadProducts } from "../lib/loadProducts";
 import { loadVacuums } from "../lib/loadVacuums";
@@ -13,7 +8,6 @@ export async function getStaticProps() {
   const beautyProducts = loadProducts();
   const homeProducts = loadVacuums();
 
-  // Get featured products from each category
   const featuredBeauty = beautyProducts.slice(0, 2);
   const featuredHome = homeProducts
     .filter((p) => p.price_gbp > 0 && p.price_gbp <= 150)
@@ -22,138 +16,132 @@ export async function getStaticProps() {
   return {
     props: {
       featuredProducts: [...featuredBeauty, ...featuredHome],
-      stats: {
-        totalProducts: beautyProducts.length + homeProducts.length,
-        categories: 3,
-      },
     },
   };
 }
 
-export default function Home({ featuredProducts, stats }) {
-  const categories = [
-    {
-      title: "Beauty & Clean Cosmetics",
-      description:
-        "Curated clean beauty products from brands that prioritize non-toxic ingredients without sacrificing performance.",
-      href: "/beauty",
-      icon: <BeautyIcon />,
-    },
-    {
-      title: "Home & Kitchen",
-      description:
-        "Quality home essentials built to last - from cordless vacuums to kitchen tools that make everyday life easier.",
-      href: "/home-kitchen",
-      icon: <HomeIcon />,
-    },
-    {
-      title: "Lifestyle & Workspace",
-      description:
-        "Thoughtfully designed products for work and life - notebooks, desk accessories, and everyday carry essentials.",
-      href: "/lifestyle",
-      icon: <LifestyleIcon />,
-    },
-  ];
-
+export default function Home({ featuredProducts }) {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-white">
-        <div className="container py-16 md:py-24">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
-              Thoughtfully Curated Products for{" "}
-              <span className="text-sage-dark">Intentional Living</span>
+      {/* Hero Section - Editorial Style */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Decorative element */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-sage/5 to-transparent" />
+
+        <div className="container relative py-20 md:py-32">
+          <div className="max-w-2xl">
+            <p className="text-sage-dark font-medium mb-4 tracking-wide uppercase text-sm">
+              A curation for the considered
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-charcoal leading-[1.1] mb-8">
+              Find things you'll
+              <span className="block text-sage-dark italic font-normal">actually love</span>
             </h1>
-            <p className="text-lg md:text-xl text-grey leading-relaxed mb-8">
-              We research and test premium products in the £30–£200 range so you
-              don't have to. Every item is selected for quality, longevity, and
-              real-world value.
+            <p className="text-xl text-grey leading-relaxed mb-10 max-w-lg">
+              We spend the hours researching so you don't have to. Just the good stuff—
+              thoughtfully chosen, honestly reviewed.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/beauty" className="btn btn-primary">
-                Browse Categories
+                Start Exploring
               </Link>
               <Link href="/about" className="btn btn-secondary">
-                Our Curation Process
+                How We Choose
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Signals */}
-      <section className="border-y border-cream-dark bg-cream">
-        <div className="container py-8">
-          <div className="flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-8 text-center">
-            <div>
-              <p className="text-2xl font-semibold text-charcoal">
-                {stats.totalProducts}+
+      {/* Editorial Divider */}
+      <div className="flex items-center justify-center py-8 bg-cream">
+        <div className="flex items-center gap-4 text-grey-light">
+          <div className="w-12 h-px bg-grey-light/40" />
+          <span className="text-xs tracking-widest uppercase">Curated with care</span>
+          <div className="w-12 h-px bg-grey-light/40" />
+        </div>
+      </div>
+
+      {/* Categories - Magazine Grid Style */}
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Beauty */}
+            <Link href="/beauty" className="group block">
+              <div className="aspect-[4/5] bg-gradient-to-br from-rose-50 to-amber-50 rounded-2xl mb-6 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-medium text-charcoal">
+                    Clean beauty
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-2 group-hover:text-sage-dark transition-colors">
+                Beauty & Skincare
+              </h3>
+              <p className="text-grey text-sm leading-relaxed">
+                Products that work as good as they feel. Clean formulas from brands who care about what goes on your skin.
               </p>
-              <p className="text-sm text-grey">Products Curated</p>
-            </div>
-            <div className="hidden md:block w-px h-8 bg-grey-light/30" />
-            <div>
-              <p className="text-2xl font-semibold text-charcoal">£30–£200</p>
-              <p className="text-sm text-grey">Price Range</p>
-            </div>
-            <div className="hidden md:block w-px h-8 bg-grey-light/30" />
-            <div>
-              <p className="text-2xl font-semibold text-charcoal">
-                {stats.categories}
+            </Link>
+
+            {/* Home */}
+            <Link href="/home-kitchen" className="group block">
+              <div className="aspect-[4/5] bg-gradient-to-br from-stone-100 to-zinc-50 rounded-2xl mb-6 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-medium text-charcoal">
+                    Built to last
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-2 group-hover:text-sage-dark transition-colors">
+                Home & Kitchen
+              </h3>
+              <p className="text-grey text-sm leading-relaxed">
+                The everyday essentials that quietly make life better. Things you'll reach for again and again.
               </p>
-              <p className="text-sm text-grey">Categories</p>
-            </div>
-            <div className="hidden md:block w-px h-8 bg-grey-light/30" />
-            <div>
-              <p className="text-2xl font-semibold text-charcoal">100%</p>
-              <p className="text-sm text-grey">Honest Reviews</p>
-            </div>
+            </Link>
+
+            {/* Lifestyle */}
+            <Link href="/lifestyle" className="group block">
+              <div className="aspect-[4/5] bg-gradient-to-br from-slate-100 to-blue-50 rounded-2xl mb-6 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-medium text-charcoal">
+                    Coming soon
+                  </span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-2 group-hover:text-sage-dark transition-colors">
+                Lifestyle & Work
+              </h3>
+              <p className="text-grey text-sm leading-relaxed">
+                From desk to daily carry. Thoughtful pieces for the spaces where you spend your time.
+              </p>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-16 md:py-20">
+      {/* Featured Section - Editorial */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-charcoal mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-grey max-w-2xl mx-auto">
-              Each category is carefully curated with products we'd genuinely
-              recommend to friends and family.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <CategoryCard key={category.href} {...category} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-charcoal mb-4">
-                Latest Finds
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div className="max-w-lg">
+              <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
+                Fresh picks
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight">
+                What we're loving lately
               </h2>
-              <p className="text-grey max-w-xl">
-                Our most recent additions, researched and selected for quality
-                and value.
-              </p>
             </div>
             <Link
               href="/beauty"
-              className="mt-4 md:mt-0 text-sage-dark hover:text-terracotta font-medium inline-flex items-center transition-colors"
+              className="mt-6 md:mt-0 text-charcoal hover:text-sage-dark font-medium inline-flex items-center transition-colors group"
             >
-              View all products
+              See everything
               <svg
-                className="w-4 h-4 ml-1"
+                className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -162,13 +150,13 @@ export default function Home({ featuredProducts, stats }) {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M9 5l7 7-7 7"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -180,103 +168,74 @@ export default function Home({ featuredProducts, stats }) {
         </div>
       </section>
 
-      {/* Our Process Section */}
-      <section className="py-16 md:py-20">
+      {/* Philosophy Section - Soft, Editorial */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-cream to-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-charcoal mb-6">
-              How We Curate
+            <p className="text-sage-dark font-medium mb-4 tracking-wide uppercase text-sm">
+              Our approach
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal leading-tight mb-8">
+              Less scrolling, more finding
             </h2>
-            <p className="text-grey text-lg leading-relaxed mb-8">
-              We're not just another affiliate site. Every product goes through
-              our research process: we check materials, read real reviews, verify
-              brand ethics, and only include items we'd buy ourselves.
+            <p className="text-grey text-lg leading-relaxed mb-12">
+              We know there are a million product lists out there. Ours is different because
+              we're not trying to show you everything—just the things worth your attention.
+              Every recommendation earns its spot through research, real reviews, and a simple
+              question: would we actually buy this?
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+              <div>
+                <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                  <svg className="w-7 h-7 text-sage-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-charcoal mb-2">Research</h3>
-                <p className="text-sm text-grey">
-                  We dig into materials, manufacturing, and real user experiences.
+                <h3 className="font-semibold text-charcoal mb-2">Deep dives</h3>
+                <p className="text-sm text-grey leading-relaxed">
+                  We read the reviews (the good and the bad), check the ingredients, and look at what real people say.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
+              <div>
+                <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                  <svg className="w-7 h-7 text-sage-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-charcoal mb-2">Verify</h3>
-                <p className="text-sm text-grey">
-                  We check brand ethics, certifications, and value for money.
+                <h3 className="font-semibold text-charcoal mb-2">No shortcuts</h3>
+                <p className="text-sm text-grey leading-relaxed">
+                  We don't feature products just because they pay well. If it's not good enough, it doesn't make the list.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
+              <div>
+                <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-white rounded-xl shadow-sm">
+                  <svg className="w-7 h-7 text-sage-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-charcoal mb-2">Recommend</h3>
-                <p className="text-sm text-grey">
-                  We only feature products we'd genuinely recommend to friends.
+                <h3 className="font-semibold text-charcoal mb-2">Real talk</h3>
+                <p className="text-sm text-grey leading-relaxed">
+                  We tell you what's great about something—and what isn't. No hype, just honest thoughts.
                 </p>
               </div>
             </div>
 
-            <Link href="/about" className="btn btn-secondary mt-10">
-              Learn More About Us
+            <Link href="/about" className="btn btn-secondary mt-14">
+              More about us
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Affiliate Disclosure */}
-      <section className="py-8 bg-cream-dark/50">
+      {/* Subtle Footer Note */}
+      <section className="py-6 bg-cream-dark/30">
         <div className="container">
-          <p className="text-center text-sm text-grey">
-            <strong>Transparency note:</strong> Some links on this site are
-            affiliate links. We may earn a small commission if you make a
-            purchase, at no extra cost to you. This helps us keep curating
-            quality finds.{" "}
-            <Link href="/disclosure" className="underline hover:text-charcoal">
+          <p className="text-center text-xs text-grey-light">
+            Some links are affiliate links—we may earn a small commission at no extra cost to you.{" "}
+            <Link href="/disclosure" className="underline hover:text-grey">
               Learn more
             </Link>
           </p>

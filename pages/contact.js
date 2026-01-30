@@ -14,8 +14,8 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-grey text-lg mb-12">
-              Have a product suggestion? Found an error? Just want to say hello?
-              We'd love to hear from you.
+              Whether you've discovered something brilliant or just want to chat about
+              your favourite finds—we're all ears.
             </p>
 
             <div className="bg-white rounded-xl p-8 md:p-12 text-left">
@@ -23,43 +23,42 @@ export default function Contact() {
                 {/* Product Suggestions */}
                 <div>
                   <h2 className="font-semibold text-charcoal mb-2">
-                    Product Suggestions
+                    Spotted something good?
                   </h2>
                   <p className="text-grey text-sm">
-                    Know a product we should feature? We're always looking for
-                    quality recommendations. Please note we only feature
-                    products in the £30-£200 range that meet our quality criteria.
+                    We love hearing about products that have made your life a little
+                    better. If you've found something special, we'd genuinely like to
+                    know about it.
                   </p>
                 </div>
 
                 {/* Issues & Corrections */}
                 <div>
                   <h2 className="font-semibold text-charcoal mb-2">
-                    Issues & Corrections
+                    Something not quite right?
                   </h2>
                   <p className="text-grey text-sm">
-                    Found a broken link, incorrect price, or outdated information?
-                    Please let us know so we can fix it. We appreciate your help
-                    keeping our recommendations accurate.
+                    Spotted a broken link or something that needs updating? Thank you
+                    for helping us keep things accurate—we really appreciate it.
                   </p>
                 </div>
 
                 {/* Business Enquiries */}
                 <div>
                   <h2 className="font-semibold text-charcoal mb-2">
-                    Business Enquiries
+                    Working together
                   </h2>
                   <p className="text-grey text-sm">
-                    For partnership or business-related enquiries, please reach out.
-                    Note: We do not accept sponsored posts or paid product placements.
+                    Open to chatting about partnerships and collaborations. Worth
+                    knowing: we keep our editorial independent, so we don't do
+                    sponsored posts or paid placements.
                   </p>
                 </div>
 
                 {/* Contact Note */}
                 <div className="pt-4 border-t border-cream-dark">
                   <p className="text-grey text-sm">
-                    Contact form coming soon. In the meantime, you can reach us through
-                    our social media channels.
+                    Contact form on the way. For now, drop us a line through social media.
                   </p>
                 </div>
               </div>

@@ -22,14 +22,14 @@ export default function CordlessUnder200({ products, lastUpdated }) {
   return (
     <Layout
       title="Cordless Vacuums Under £200"
-      description="The best cordless vacuum cleaners available in the UK under £200. Premium options with better suction, longer battery life, and more features."
+      description="Step up to better suction and longer battery life. Our picks for cordless vacuums that deliver without the premium price tag."
     >
       {/* Hero */}
-      <section className="bg-white border-b border-cream-dark">
-        <div className="container py-12 md:py-16">
+      <section className="bg-white">
+        <div className="container py-16 md:py-20">
           <div className="max-w-2xl">
             {/* Breadcrumbs */}
-            <nav className="flex items-center gap-2 text-sm text-grey mb-4">
+            <nav className="flex items-center gap-2 text-sm text-grey mb-6">
               <Link href="/" className="hover:text-charcoal">Home</Link>
               <span>/</span>
               <Link href="/home-kitchen" className="hover:text-charcoal">Home & Kitchen</Link>
@@ -37,28 +37,30 @@ export default function CordlessUnder200({ products, lastUpdated }) {
               <span className="text-charcoal">Cordless Vacuums</span>
             </nav>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Best Cordless Vacuums Under £200
+            <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
+              Home & Kitchen
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+              Cordless vacuums under £200
             </h1>
 
-            <p className="text-grey text-lg leading-relaxed mb-6">
-              Stepping up your budget to £200 opens up better suction power, longer
-              battery life, and more premium features. These are our top picks for
-              cordless vacuums that deliver excellent performance without breaking
-              the bank.
+            <p className="text-grey text-lg leading-relaxed mb-8">
+              A bit more budget opens up noticeably better options—stronger suction,
+              longer-lasting batteries, and features that actually make a difference.
+              These are the ones we'd recommend.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-4">
+            <div className="flex flex-wrap gap-3 mb-6">
               <Link
                 href="/home/vacuums/cordless-under-120"
-                className="text-sm text-sage-dark hover:text-terracotta underline"
+                className="text-sm text-sage-dark hover:text-terracotta"
               >
-                ← See budget options under £120
+                ← On a tighter budget? See options under £120
               </Link>
             </div>
 
-            <p className="text-sm text-grey-light">
-              Last updated: {lastUpdated} · {products.length} products
+            <p className="text-xs text-grey-light">
+              Updated {lastUpdated} · {products.length} products
             </p>
           </div>
         </div>
@@ -82,63 +84,29 @@ export default function CordlessUnder200({ products, lastUpdated }) {
       </section>
 
       {/* Selection Criteria */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-gradient-to-b from-cream to-white">
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl font-semibold text-charcoal mb-6">
-              How We Selected These Products
+              How we chose these
             </h2>
 
             <div className="prose text-grey">
-              <p className="mb-4">
-                Every vacuum on this list has been researched for real-world performance.
-                At this price point, we expect better build quality, stronger suction,
-                and longer battery life.
+              <p>
+                At this price point, we expect more—better build quality, stronger
+                suction, and batteries that last. Every vacuum here is cordless,
+                available in the UK, and priced at £200 or less when we checked.
               </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mt-6 mb-3">Our criteria:</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Listed as a vacuum cleaner by the retailer or brand</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Cordless operation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Priced at £200 or less at the time of checking</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Available in the UK</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Affiliate Disclosure */}
-      <section className="py-8 bg-cream-dark/50">
+      <section className="py-6 bg-cream-dark/30">
         <div className="container">
-          <p className="text-sm text-grey max-w-2xl">
-            <strong>Affiliate disclosure:</strong> Some links on this page are
-            affiliate links. This means BestFindsUK may earn a small commission
-            if you choose to make a purchase, at no extra cost to you.
-          </p>
-          <p className="text-sm text-grey mt-2">
-            <strong>Amazon disclosure:</strong> As an Amazon Associate, BestFindsUK
-            earns from qualifying purchases.
+          <p className="text-xs text-grey-light text-center">
+            Some links are affiliate links—we may earn a small commission at no extra cost to you.
           </p>
         </div>
       </section>

@@ -13,7 +13,7 @@ export default function Footer() {
               BestFindsUK
             </Link>
             <p className="mt-4 text-grey-light text-sm leading-relaxed">
-              Thoughtfully curated premium products for intentional living. Quality over quantity, always.
+              Helping you find fewer, better things. We do the research so you don't have to.
             </p>
           </div>
 

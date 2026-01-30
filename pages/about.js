@@ -5,114 +5,107 @@ export default function About() {
   return (
     <Layout
       title="About Us"
-      description="Learn about BestFindsUK - who we are, how we curate products, and why we focus on quality over quantity."
+      description="The story behind BestFindsUK—why we started, how we choose what to feature, and what makes us different."
     >
       {/* Hero */}
-      <section className="bg-white border-b border-cream-dark">
-        <div className="container py-12 md:py-20">
+      <section className="bg-white">
+        <div className="container py-16 md:py-24">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
-              About BestFindsUK
+            <p className="text-sage-dark font-medium mb-4 tracking-wide uppercase text-sm">
+              About us
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+              We believe in fewer, better things
             </h1>
             <p className="text-xl text-grey leading-relaxed">
-              We're not another generic affiliate site. We're product enthusiasts
-              who got tired of sifting through endless "best of" lists filled with
-              mediocre recommendations.
+              In a world of endless options, we help you find the ones actually worth having.
             </p>
           </div>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-12 md:py-16">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-cream to-white">
         <div className="container">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-semibold text-charcoal mb-6">Our Story</h2>
-            <div className="prose text-grey space-y-4">
+            <h2 className="text-2xl font-semibold text-charcoal mb-8">Why we started this</h2>
+            <div className="prose text-grey space-y-5 leading-relaxed">
               <p>
-                BestFindsUK started because we were frustrated with the state
-                of product recommendations online.
+                We got tired of the same old product roundups. You know the ones—fifty "best"
+                items that all feel like they were picked by an algorithm, not a person.
               </p>
               <p>
-                Too many "review" sites just list whatever pays the highest commission.
-                Too many "best of" articles are written by people who've never actually
-                used the products. And too many recommendation lists include cheap items
-                that break within months.
+                So we started doing our own research. Reading the real reviews. Checking what
+                things are actually made of. Asking friends what they've tried and loved (or regretted).
               </p>
               <p>
-                We wanted something different: a curated collection of products in the
-                sweet spot of £30-£200—premium enough to actually be well-made, but
-                accessible enough that real people can afford them. Products we'd
-                genuinely recommend to friends and family.
+                What started as a personal habit turned into this: a place where we share the
+                things we've genuinely vetted. Not everything, just the good stuff.
               </p>
-              <p>
-                That's BestFindsUK. Quality over quantity. Research over commissions.
-                Genuine recommendations over generic lists.
+              <p className="text-charcoal font-medium">
+                Quality over quantity. Always.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Curation Process */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* How We Choose */}
+      <section className="py-16 md:py-20 bg-white">
         <div className="container">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-semibold text-charcoal mb-6">
-              How We Curate Products
+            <h2 className="text-2xl font-semibold text-charcoal mb-10">
+              How we decide what makes the cut
             </h2>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full font-semibold">
+            <div className="space-y-8">
+              <div className="flex gap-5">
+                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-sage/20 to-sage/5 text-sage-dark rounded-xl text-sm font-semibold">
                   1
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal mb-1">Research</h3>
-                  <p className="text-grey text-sm">
-                    We dig into materials, manufacturing processes, and brand
-                    reputation. We read real user reviews—not just the 5-star ones,
-                    but the critical ones too.
+                  <h3 className="font-semibold text-charcoal mb-2">We dig in</h3>
+                  <p className="text-grey text-sm leading-relaxed">
+                    We look at what it's made of, who makes it, and what people who've actually
+                    used it have to say—the good reviews and the honest critiques.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full font-semibold">
+              <div className="flex gap-5">
+                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-sage/20 to-sage/5 text-sage-dark rounded-xl text-sm font-semibold">
                   2
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal mb-1">Verify</h3>
-                  <p className="text-grey text-sm">
-                    We check certifications (cruelty-free, clean beauty, etc.),
-                    verify brand ethics claims, and assess value for money against
-                    alternatives.
+                  <h3 className="font-semibold text-charcoal mb-2">We ask the hard questions</h3>
+                  <p className="text-grey text-sm leading-relaxed">
+                    Is this brand actually doing what they claim? Does this product live up
+                    to the hype? Is there something better out there?
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full font-semibold">
+              <div className="flex gap-5">
+                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-sage/20 to-sage/5 text-sage-dark rounded-xl text-sm font-semibold">
                   3
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal mb-1">Filter</h3>
-                  <p className="text-grey text-sm">
-                    We apply strict criteria for each category. Not every product
-                    makes the cut—we only include items we'd genuinely buy ourselves.
+                  <h3 className="font-semibold text-charcoal mb-2">We apply the friend test</h3>
+                  <p className="text-grey text-sm leading-relaxed">
+                    Would we actually recommend this to someone we care about? If there's any
+                    hesitation, it doesn't make the list.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full font-semibold">
+              <div className="flex gap-5">
+                <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gradient-to-br from-sage/20 to-sage/5 text-sage-dark rounded-xl text-sm font-semibold">
                   4
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal mb-1">Update</h3>
-                  <p className="text-grey text-sm">
-                    We regularly review our recommendations. Prices change, products
-                    get discontinued, and better options appear. We keep our lists
-                    current.
+                  <h3 className="font-semibold text-charcoal mb-2">We keep it fresh</h3>
+                  <p className="text-grey text-sm leading-relaxed">
+                    Things change. Prices shift, products get reformulated, better options
+                    come along. We revisit our picks regularly.
                   </p>
                 </div>
               </div>
@@ -121,38 +114,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* What We Don't Do */}
-      <section className="py-12 md:py-16">
+      {/* What We Skip */}
+      <section className="py-16 md:py-20">
         <div className="container">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-semibold text-charcoal mb-6">
-              What We Don't Do
+            <h2 className="text-2xl font-semibold text-charcoal mb-8">
+              Things you won't find here
             </h2>
-            <div className="bg-cream rounded-lg p-6">
-              <ul className="space-y-3 text-grey">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-terracotta flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span><strong>Chase commissions:</strong> We never prioritize products just because they pay more. Our recommendations are based on quality, not affiliate rates.</span>
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <ul className="space-y-4 text-grey">
+                <li className="flex items-start gap-4">
+                  <span className="text-terracotta mt-1">×</span>
+                  <span>Products we featured because they pay well (that's not how this works)</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-terracotta flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span><strong>Accept sponsored posts:</strong> We don't take money to feature products. Everything here is genuinely curated.</span>
+                <li className="flex items-start gap-4">
+                  <span className="text-terracotta mt-1">×</span>
+                  <span>Sponsored posts or paid placements—everything here is genuinely chosen</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-terracotta flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span><strong>Feature cheap dupes:</strong> We focus on quality products that last, not the cheapest option available.</span>
+                <li className="flex items-start gap-4">
+                  <span className="text-terracotta mt-1">×</span>
+                  <span>Cheap stuff that'll fall apart—we're looking for things that last</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-terracotta flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span><strong>Use fake urgency:</strong> No "Only 2 left!" messages. No pressure tactics. Just honest recommendations.</span>
+                <li className="flex items-start gap-4">
+                  <span className="text-terracotta mt-1">×</span>
+                  <span>Pressure tactics or fake urgency—take your time, we're not going anywhere</span>
                 </li>
               </ul>
             </div>
@@ -161,29 +146,30 @@ export default function About() {
       </section>
 
       {/* Transparency */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-semibold text-charcoal mb-6">
-              Our Commitment to Transparency
+            <h2 className="text-2xl font-semibold text-charcoal mb-8">
+              A note on how we keep the lights on
             </h2>
-            <div className="prose text-grey space-y-4">
+            <div className="prose text-grey space-y-5 leading-relaxed">
               <p>
-                Yes, we use affiliate links. When you buy through our links, we may
-                earn a small commission at no extra cost to you. This is how we keep
-                BestFindsUK running without ads or paywalls.
+                Yes, we use affiliate links. When you buy something through our links,
+                we might earn a small commission—at no extra cost to you.
               </p>
               <p>
-                But here's the thing: we'd recommend these products even if there
-                was no commission. The affiliate revenue helps us spend more time
-                researching and curating—not less time being honest.
+                But here's what matters: we'd recommend these things whether there was a
+                commission or not. The products come first. The business model just helps
+                us keep doing this.
               </p>
               <p>
-                We clearly label affiliate links and maintain a detailed{" "}
+                No ads. No paywalls. Just honest recommendations and a bit of trust.
+              </p>
+              <p className="text-sm">
+                Want the full details?{" "}
                 <Link href="/disclosure" className="text-sage-dark hover:text-terracotta underline">
-                  disclosure policy
-                </Link>{" "}
-                for full transparency.
+                  Read our disclosure
+                </Link>
               </p>
             </div>
           </div>
@@ -191,18 +177,18 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-cream to-cream-dark/30">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-semibold text-charcoal mb-4">
-              Ready to Explore?
+              Ready to explore?
             </h2>
-            <p className="text-grey mb-8">
-              Browse our curated categories and find products worth your money.
+            <p className="text-grey mb-10">
+              See what we've been finding lately.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/beauty" className="btn btn-primary">
-                Beauty & Cosmetics
+                Beauty
               </Link>
               <Link href="/home-kitchen" className="btn btn-secondary">
                 Home & Kitchen
@@ -216,12 +202,12 @@ export default function About() {
       </section>
 
       {/* Contact */}
-      <section className="py-8 bg-cream-dark/50">
+      <section className="py-6 bg-cream-dark/30">
         <div className="container">
           <p className="text-center text-sm text-grey">
-            Have questions or product suggestions?{" "}
+            Got a question or a product we should know about?{" "}
             <Link href="/contact" className="text-sage-dark hover:text-terracotta underline">
-              Get in touch
+              We'd love to hear from you
             </Link>
           </p>
         </div>

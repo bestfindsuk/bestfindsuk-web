@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Layout({
   children,
   title = "BestFindsUK",
-  description = "Thoughtfully curated premium products for intentional living. Quality finds in beauty, home, and lifestyle - all between £30-£200.",
+  description = "A carefully curated collection of things worth owning. Quality finds in beauty, home, and lifestyle—thoughtfully chosen, honestly reviewed.",
   ogImage,
 }) {
   const fullTitle = title === "BestFindsUK" ? title : `${title} | BestFindsUK`;

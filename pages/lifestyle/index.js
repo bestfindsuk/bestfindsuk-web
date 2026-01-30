@@ -5,39 +5,42 @@ export default function LifestyleCategory() {
   return (
     <Layout
       title="Lifestyle & Workspace"
-      description="Thoughtfully designed products for work and life - notebooks, desk accessories, leather goods, and everyday carry essentials. Coming soon."
+      description="From your desk to your daily carry. Thoughtful pieces for the spaces and moments where you spend your time."
     >
       {/* Hero */}
-      <section className="bg-white border-b border-cream-dark">
-        <div className="container py-12 md:py-16">
+      <section className="bg-white">
+        <div className="container py-16 md:py-20">
           <div className="max-w-2xl">
             <Link
               href="/"
-              className="text-sm text-grey hover:text-charcoal mb-4 inline-flex items-center"
+              className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
             >
               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Home
+              Home
             </Link>
-            <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
               Lifestyle & Workspace
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+              For the spaces in between
             </h1>
             <p className="text-grey text-lg leading-relaxed">
-              Thoughtfully designed products for work and life. We're curating
-              quality notebooks, desk accessories, leather goods, and everyday
-              carry essentials that combine function with lasting style.
+              The notebook that feels right in your hands. The wallet that ages
+              beautifully. We're seeking out the pieces that make your everyday
+              a little more intentional.
             </p>
           </div>
         </div>
       </section>
 
       {/* Coming Soon */}
-      <section className="py-20 md:py-32">
+      <section className="py-20 md:py-32 bg-gradient-to-b from-cream to-white">
         <div className="container">
           <div className="max-w-xl mx-auto text-center">
-            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-sage/10 text-sage-dark rounded-full">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-white rounded-xl shadow-sm">
+              <svg className="w-8 h-8 text-sage-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -47,47 +50,38 @@ export default function LifestyleCategory() {
               </svg>
             </div>
             <h2 className="text-2xl font-semibold text-charcoal mb-4">
-              Coming Soon
+              Still in the works
             </h2>
-            <p className="text-grey mb-8">
-              We're carefully curating quality lifestyle products including premium
-              notebooks, leather wallets, desk accessories, and everyday carry
-              essentials. Check back soon!
+            <p className="text-grey mb-10">
+              We're taking our time with this one—hunting down the kind of pieces
+              that feel special without trying too hard. Check back soon.
             </p>
 
-            <div className="bg-cream rounded-lg p-6 text-left">
-              <h3 className="font-semibold text-charcoal mb-3">What to expect:</h3>
-              <ul className="space-y-2 text-sm text-grey">
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Best leather wallets under £100
+            <div className="bg-white rounded-xl p-8 text-left shadow-sm">
+              <h3 className="font-medium text-charcoal mb-4">On our radar:</h3>
+              <ul className="space-y-3 text-sm text-grey">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sage mt-2 flex-shrink-0"></span>
+                  Leather goods that get better with age
                 </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Premium notebooks for journaling
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sage mt-2 flex-shrink-0"></span>
+                  Notebooks worth writing in
                 </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Quality desk accessories
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sage mt-2 flex-shrink-0"></span>
+                  Desk pieces that spark a little joy
                 </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Everyday carry essentials
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sage mt-2 flex-shrink-0"></span>
+                  Everyday carry that's built to last
                 </li>
               </ul>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-10">
               <Link href="/" className="btn btn-secondary">
-                Browse Other Categories
+                Explore other categories
               </Link>
             </div>
           </div>
