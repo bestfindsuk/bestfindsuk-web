@@ -2,6 +2,7 @@ import Layout from "../../components/Layout";
 import ProductCard from "../../components/ProductCard";
 import { loadVacuums } from "../../lib/loadVacuums";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const vacuums = loadVacuums();
@@ -23,33 +24,49 @@ export default function HomeKitchenCategory({ products, lastUpdated }) {
       title="Home & Kitchen"
       description="Everyday essentials that quietly make life better. Products we've researched for build quality, thoughtful design, and genuine usefulness."
     >
-      {/* Hero */}
-      <section className="bg-white">
-        <div className="container py-16 md:py-20">
-          <div className="max-w-2xl">
-            <Link
-              href="/"
-              className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
-            >
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Home
-            </Link>
-            <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
-              Home & Kitchen
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
-              The everyday things that matter
-            </h1>
-            <p className="text-grey text-lg leading-relaxed">
-              There's something satisfying about a tool that just works. We look for
-              home essentials with real craftsmanship—things you'll reach for again
-              and again without thinking twice.
-            </p>
-            <p className="text-xs text-grey-light mt-6">
-              Updated {lastUpdated}
-            </p>
+      {/* Hero with Image */}
+      <section className="bg-white overflow-hidden">
+        <div className="container py-12 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="animate-fade-in-up">
+              <Link
+                href="/"
+                className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Home
+              </Link>
+              <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
+                Home & Kitchen
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+                The everyday things that matter
+              </h1>
+              <p className="text-grey text-lg leading-relaxed">
+                There's something satisfying about a tool that just works. We look for
+                home essentials with real craftsmanship—things you'll reach for again
+                and again without thinking twice.
+              </p>
+              <p className="text-xs text-grey-light mt-6">
+                Updated {lastUpdated}
+              </p>
+            </div>
+
+            {/* Hero Image */}
+            <div className="relative hidden lg:block animate-fade-in delay-200">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home-header.png"
+                  alt="Home essentials"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

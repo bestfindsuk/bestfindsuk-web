@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LifestyleCategory() {
   return (
@@ -7,30 +8,46 @@ export default function LifestyleCategory() {
       title="Lifestyle & Workspace"
       description="From your desk to your daily carry. Thoughtful pieces for the spaces and moments where you spend your time."
     >
-      {/* Hero */}
-      <section className="bg-white">
-        <div className="container py-16 md:py-20">
-          <div className="max-w-2xl">
-            <Link
-              href="/"
-              className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
-            >
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Home
-            </Link>
-            <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
-              Lifestyle & Workspace
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
-              For the spaces in between
-            </h1>
-            <p className="text-grey text-lg leading-relaxed">
-              The notebook that feels right in your hands. The wallet that ages
-              beautifully. We're seeking out the pieces that make your everyday
-              a little more intentional.
-            </p>
+      {/* Hero with Image */}
+      <section className="bg-white overflow-hidden">
+        <div className="container py-12 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="animate-fade-in-up">
+              <Link
+                href="/"
+                className="text-sm text-grey hover:text-charcoal mb-6 inline-flex items-center"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Home
+              </Link>
+              <p className="text-sage-dark font-medium mb-3 tracking-wide uppercase text-sm">
+                Lifestyle & Workspace
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+                For the spaces in between
+              </h1>
+              <p className="text-grey text-lg leading-relaxed">
+                The notebook that feels right in your hands. The wallet that ages
+                beautifully. We're seeking out the pieces that make your everyday
+                a little more intentional.
+              </p>
+            </div>
+
+            {/* Hero Image */}
+            <div className="relative hidden lg:block animate-fade-in delay-200">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/lifestyle-header.png"
+                  alt="Lifestyle and workspace"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
