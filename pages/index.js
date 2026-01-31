@@ -302,17 +302,6 @@ export default function Home({ featuredProducts }) {
         </div>
       </section>
 
-      {/* Subtle Footer Note */}
-      <section className="py-6 bg-cream-dark/30">
-        <div className="container">
-          <p className="text-center text-xs text-grey-light">
-            Some links are affiliate links—we may earn a small commission at no extra cost to you.{" "}
-            <Link href="/disclosure" className="underline hover:text-grey">
-              Learn more
-            </Link>
-          </p>
-        </div>
-      </section>
     </Layout>
   );
 }

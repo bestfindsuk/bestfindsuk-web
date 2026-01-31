@@ -81,7 +81,10 @@ export default function Footer() {
               &copy; {currentYear} BestFindsUK. All rights reserved.
             </p>
             <p className="text-grey-light text-xs">
-              Some links are affiliate links. We may earn a commission at no extra cost to you.
+              Some links are affiliate links. We may earn a commission at no extra cost to you.{" "}
+              <Link href="/disclosure" className="underline hover:text-white">
+                Learn more
+              </Link>
             </p>
           </div>
         </div>
